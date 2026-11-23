@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grupo CAZPACK</title>
+<meta name="description" content="Grupo CAZPACK · Servicios de Empaque y Procesos de Acondicionamiento. Tlalnepantla, Edo. Méx.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE: corporativo, sobrio, confiable — una carta de presentación que se lee en el celular.
+   IDEA: la etiqueta de una caja de embarque: franjas azules, datos claros, todo en orden.
+   PICTURE: escena isométrica propia de cajas sobre tarima y banda transportadora.
+   COLOUR and TYPE: azul fuerte #0B3D91 dominante, blanco, azul medio de apoyo; Montserrat + Inter.
+   LAYOUT: portada azul a todo lo ancho, bandas blancas, contacto azul con botón de WhatsApp. */
+:root{color-scheme:light dark;
+--az:#0B3D91;--azd:#072A66;--azm:#1F5FBF;--azl:#BFD2F2;
+--bg:light-dark(#ffffff,#071a3d);--soft:light-dark(#EEF3FB,#0c2552);--ink:light-dark(#1c2433,#eaf0fb);--mut:light-dark(#4a5568,#b8c6e0);--line:light-dark(#d6e0f2,#1d3a70);--card:light-dark(#ffffff,#0e2a5c)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:Montserrat,Arial,sans-serif;line-height:1.08;text-wrap:balance;margin:0}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto}
+.band{padding:clamp(40px,6vw,88px) max(5vw,18px)}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:12px 22px;border-radius:999px;font:700 16px Montserrat,Arial,sans-serif;text-decoration:none;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}.btn:focus-visible{outline:3px solid var(--azl);outline-offset:3px}
+.btn svg{width:22px;height:22px;flex:none}
+.wa{background:#fff;color:var(--az)}
+.ghost{color:#fff;border:2px solid rgba(255,255,255,.55)}
+/* nav */
+nav{position:sticky;top:0;z-index:5;background:var(--az);color:#fff;padding:10px max(5vw,18px);box-shadow:0 2px 12px rgba(7,42,102,.25)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+nav .logo{height:38px;width:auto;display:block}
+nav ul{display:flex;gap:4px 20px;list-style:none;margin:0;padding:0;flex-wrap:wrap;font:600 14px Montserrat,Arial,sans-serif}
+nav ul a{text-decoration:none;opacity:.9;padding:8px 0;display:inline-block}nav ul a:hover{opacity:1;text-decoration:underline}
+/* hero */
+.hero{color:#fff;background:linear-gradient(100deg,rgba(7,42,102,.96) 0%,rgba(11,61,145,.88) 48%,rgba(11,61,145,.35) 100%),url('https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=2000&q=70') center/cover,var(--az);min-height:clamp(520px,78vh,760px);display:flex;align-items:center}.hero .wrap{width:100%}
+.hero .wrap>div{max-width:640px}
+.hero h1{font-size:clamp(36px,5.2vw,58px);font-weight:800}
+.hero .sub{font:600 clamp(18px,2vw,22px)/1.35 Montserrat,Arial,sans-serif;color:var(--azl);margin:14px 0 20px}
+.hero p{margin:0 0 26px;max-width:52ch;color:#e3ebf9}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero .place{margin-top:22px;font-size:14px;color:var(--azl)}
+@media(prefers-reduced-motion:reduce){.btn,.ph img{transition:none}}
+/* objetivo + ventajas */
+.objg{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,4vw,56px);align-items:stretch}
+.obj{display:grid;gap:26px;align-content:center}
+.vent{grid-template-columns:repeat(3,minmax(0,1fr))}
+.ph{background:var(--az) center/cover no-repeat;border-radius:22px;min-height:260px;box-shadow:0 18px 40px rgba(7,42,102,.18)}
+.ph.tall{min-height:420px}
+.gal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:28px}
+.gal figure{margin:0;position:relative;border-radius:18px;overflow:hidden;min-height:240px;background:var(--az) center/cover no-repeat}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 16px;color:#fff;font:700 16px Montserrat,Arial,sans-serif;background:linear-gradient(transparent,rgba(7,42,102,.92))}
+h2{font-size:clamp(28px,3.4vw,40px);color:var(--az);font-weight:800;margin-bottom:14px}
+:root[data-theme=dark] h2{color:#fff}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) h2{color:#fff}}
+.lead{font-size:17px;color:var(--mut);max-width:62ch;margin:0}
+.vent{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.vent div{background:var(--soft);border-radius:16px;padding:22px 20px;border:1px solid var(--line)}
+.vent svg{width:34px;height:34px;color:var(--azm);display:block;margin-bottom:12px}
+.vent b{font:700 17px/1.3 Montserrat,Arial,sans-serif;display:block}
+/* servicios */
+.serv{background:var(--soft)}
+.grid2{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:clamp(20px,3vw,36px);margin-top:28px}
+.list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.item{display:flex;gap:16px;align-items:flex-start;background:var(--card);border-radius:16px;padding:20px;border:1px solid var(--line)}
+.num{flex:none;width:44px;height:44px;border-radius:50%;background:var(--az);color:#fff;display:grid;place-items:center;font:800 18px Montserrat,Arial,sans-serif}
+.item p{margin:0;font-weight:500;align-self:center}
+.cons{background:var(--az);color:#fff;border-radius:20px;padding:28px 26px}
+.cons h3{font-size:20px;margin-bottom:18px}
+.cons ol{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.cons li{display:flex;gap:12px}.cons li b{color:var(--azl);font-family:Montserrat,Arial,sans-serif;flex:none}
+/* clientes */
+.cli{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:26px 0 14px}
+.cli span{display:grid;place-items:center;text-align:center;min-height:86px;padding:12px;border:2px solid var(--az);border-radius:16px;font:800 17px Montserrat,Arial,sans-serif;color:var(--az);letter-spacing:.02em}
+:root[data-theme=dark] .cli span{color:#fff;border-color:var(--azm)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .cli span{color:#fff;border-color:var(--azm)}}
+.small{color:var(--mut);margin:0}
+/* contacto */
+.contact{color:#fff;background:linear-gradient(rgba(7,42,102,.92),rgba(11,61,145,.9)),url('https://images.unsplash.com/photo-1580674285054-bed31e145f59?auto=format&fit=crop&w=1800&q=70') center/cover,var(--az)}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center}
+.contact h2{color:#fff}
+.contact .lead{color:#e3ebf9}
+.card{background:#fff;color:#1c2433;border-radius:22px;padding:28px;box-shadow:0 24px 50px rgba(0,0,0,.25)}
+.card h3{font-size:24px;color:var(--az)}
+.card .co{color:var(--azm);font:600 14px Montserrat,Arial,sans-serif;margin:4px 0 18px}
+.card dl{margin:0;display:grid;gap:12px}
+.card dt{font:700 12px Montserrat,Arial,sans-serif;color:var(--azm)}
+.card dd{margin:0;font-size:16px;overflow-wrap:anywhere}
+.card dd a{text-decoration:none;font-weight:600;color:var(--az)}
+.card .btn{margin-top:22px;background:var(--az);color:#fff;width:100%;justify-content:center}
+footer{background:var(--azd);color:var(--azl);text-align:center;padding:20px max(5vw,18px);font-size:14px}
+@media(max-width:900px){.obj,.grid2,.contact .wrap,.objg{grid-template-columns:minmax(0,1fr)}.cli{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.gal{grid-template-columns:minmax(0,1fr)}.ph.tall{min-height:260px}.hero{min-height:0}nav ul{display:none}.list,.vent{grid-template-columns:minmax(0,1fr)}.hero .ctas .btn{flex:1 1 100%;justify-content:center}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></symbol>
+  <symbol id="box" viewBox="0 0 200 200"><g fill="none" stroke="currentColor" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"><path d="M100 30 165 65v75l-65 35-65-35V65Z"/><path d="M35 65l65 35 65-35M100 100v75M67 47l65 35v30"/></g></symbol>
+</svg>
+
+<nav aria-label="Principal">
+  <div class="wrap">
+    <a href="#inicio" aria-label="Grupo CAZPACK, inicio">
+      <svg class="logo" viewBox="0 0 900 220" role="img" aria-label="CAZPACK"><rect y="10" width="200" height="200" rx="36" fill="#fff"/><use href="#box" x="0" y="10" width="200" height="200" style="color:#0B3D91"/><text x="230" y="140" font-family="Montserrat,Arial,sans-serif" font-weight="800" font-size="118" fill="#fff" letter-spacing="4">CAZPACK</text><text x="234" y="196" font-family="Montserrat,Arial,sans-serif" font-weight="600" font-size="34" fill="#BFD2F2" letter-spacing="13">GRUPO · EMPAQUE</text></svg>
+    </a>
+    <ul>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#clientes">Clientes</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero band" id="inicio">
+  <div class="wrap">
+    <div>
+      <h1>Grupo CAZPACK</h1>
+      <div class="sub">Servicios de Empaque y Procesos de Acondicionamiento</div>
+      <p>Soluciones integrales en el control y preparación de sus productos: etiquetado, acondicionamiento, surtido y maniobras, con seguridad y calidad en cada proceso.</p>
+      <div class="ctas">
+        <a class="btn wa" href="https://wa.me/525620068347?text=Hola%2C%20me%20interesa%20cotizar%20servicios%20con%20Grupo%20CAZPACK" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Cotizar por WhatsApp</a>
+        <a class="btn ghost" href="#servicios">Ver servicios</a>
+      </div>
+      <div class="place">Tlalnepantla, Estado de México</div>
+    </div>
+  </div>
+</header>
+
+<section class="band" id="nosotros">
+  <div class="wrap objg">
+    <div class="ph tall" style="background-image:url('https://images.unsplash.com/photo-1766040923580-16ad32fae8b4?auto=format&fit=crop&w=1200&q=70')" role="img" aria-label="Cajas de cartón selladas con cinta azul"></div>
+    <div class="obj">
+    <div>
+      <h2>Nuestro objetivo</h2>
+      <p class="lead">Brindar a las empresas soluciones integrales en el control y preparación de sus productos, dando seguridad y calidad en cada proceso a desarrollar.</p>
+    </div>
+    <div class="vent">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M7 12h10M10 17h4"/></svg><b>Reducción de procesos operativos</b></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M17 11h4"/></svg><b>Reducción de personal asignado</b></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/></svg><b>Reducción en tiempos de entrega</b></div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="band serv" id="servicios">
+  <div class="wrap">
+    <h2>Nuestros servicios</h2>
+    <p class="lead">Nos ponemos a sus órdenes con un portafolio de soluciones integrales que facilitan su flujo operativo.</p>
+    <div class="gal">
+      <figure style="background-image:url('https://images.unsplash.com/photo-1589792923962-537704632910?auto=format&fit=crop&w=900&q=70')"><figcaption>Preparación y surtido de producto</figcaption></figure>
+      <figure style="background-image:url('https://images.unsplash.com/photo-1645736315000-6f788915923b?auto=format&fit=crop&w=900&q=70')"><figcaption>Maniobras de carga y descarga</figcaption></figure>
+      <figure style="background-image:url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=70')"><figcaption>Acondicionamiento por tienda</figcaption></figure>
+    </div>
+    <div class="grid2">
+      <div class="list" id="servList"></div>
+      <aside class="cons">
+        <h3>Servicios de consultoría</h3>
+        <ol id="consList"></ol>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="clientes">
+  <div class="wrap">
+    <h2>Nuestra experiencia nos respalda</h2>
+    <p class="lead">Hemos colaborado con las siguientes empresas, dándoles ventajas de desarrollo y crecimiento en sus diferentes áreas.</p>
+    <div class="cli"><span>Oscar Hackman</span><span>DC Shoes</span><span>Vans</span><span>Puma</span></div>
+    <p class="small">Entre otros clientes importantes en el giro.</p>
+  </div>
+</section>
+
+<section class="band contact" id="contacto">
+  <div class="wrap">
+    <div>
+      <h2>¿Platicamos?</h2>
+      <p class="lead">Quedamos atentos a cualquier cotización en los servicios mencionados. Escríbanos por WhatsApp y con gusto le atendemos.</p>
+    </div>
+    <div class="card">
+      <h3>Israel Félix Cázares</h3>
+      <div class="co">Grupo CAZPACK</div>
+      <dl>
+        <div><dt>WhatsApp</dt><dd><a href="https://wa.me/525620068347" target="_blank" rel="noopener">56 2006 8347</a></dd></div>
+        <div><dt>Teléfono</dt><dd><a href="tel:+525564224924">55 6422 4924</a></dd></div>
+        <div><dt>Correo</dt><dd><a href="mailto:ifcazares79@gmail.com">ifcazares79@gmail.com</a></dd></div>
+        <div><dt>Dirección</dt><dd>Parque Madín #6, Fuentes de Satélite</dd></div>
+        <div><dt>R.F.C.</dt><dd>FECI791119HX7</dd></div>
+      </dl>
+      <a class="btn" href="https://wa.me/525620068347?text=Hola%2C%20me%20interesa%20cotizar%20servicios%20con%20Grupo%20CAZPACK" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Enviar WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer>Fotografías: Unsplash (licencia libre). © 2026 Grupo CAZPACK · Servicios de Empaque y Procesos de Acondicionamiento · Tlalnepantla, Edo. Méx.</footer>
+
+<script>
+{
+const serv=['Colocación de etiquetas adheribles','Colocación de hashtag y etiquetado adherible con plastiflecha','Colocación de sensor con imán','Enganchado con tallero','Maniobras de carga y descarga de contenedores y operación diaria (auxiliar de almacén)','Surtidos globales de producto, distribución por tienda, etiquetado y preparación'];
+document.getElementById('servList').innerHTML=serv.map((t,i)=>`<div class="item"><span class="num">${i+1}</span><p>${t}</p></div>`).join('');
+const cons=['Análisis de operación por área','Reducción de costos operativos','Creación de manuales de flujo por área','Selección de personal para cada área de acuerdo a conocimiento y aptitudes'];
+document.getElementById('consList').innerHTML=cons.map((t,i)=>`<li><b>${'ABCD'[i]})</b><span>${t}</span></li>`).join('');
+}
+</script>
+</body>
+</html>
